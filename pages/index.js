@@ -14,101 +14,149 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main} ${inter.className}`}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.js</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
+      <main className={styles.page}>
+        <div className={styles.page__header} >
+          <div className={styles.header__menu}>
+            <div className={styles.menu__brand}>
+              <h1 className={styles.brandname}>BrandName</h1>
+            </div>
+            <div className={styles.menu__nav}>
+              <nav className={styles.navigation}>
+                <a className={styles.navigation__item}>Home</a>
+                <a className={styles.navigation__item}>Product</a>
+                <a className={styles.navigation__item}>Pricing</a>
+                <a className={styles.navigation__item}>Contact</a>
+              </nav>
+            </div>
+            <div className={styles.authorization}>
+              <div className={styles.authorization__item}>
+                <button className={styles.login}>Login</button>
+                <button className={styles.join}>JOIN US</button>
+              </div>
+            </div>
+          </div>
+          <div className={styles.header__content}>
+            <div className={`${styles.header__content} ${styles['header__content-leftside']}`}>
+              <div className={styles.header__content__text}>
+                <h5 className={styles.tag}>Join Us</h5>
+                <h1 className={styles.title}>A Great Place to <br/> Receive Care</h1>
+                <h4 className={styles.sub__title}>DentalCare is most focused in <br/> helping you discover your most <br/> beauiful smile</h4>
+                <div className={styles.header__content__button}>
+                  <button className={styles.sub__join}>Join Us</button>
+                  <div className={styles.more__button}>
+                    <button className={styles.more}>Learn More</button>
+                  </div>
+                </div>
+              </div>
+            </div>  
+            <div className={`${styles.header__content} ${styles['header__content-rightside']}`}>    
+              <div className={styles.header__content__images}>
+                <Image
+                  src="/img 3.png"
+                  alt="image 3"
+                  className={styles.img3}
+                  width={212.73}
+                  height={212.73}
+                  priority
+                />
+                <Image
+                  src="/img 1.png"
+                  alt="image 1"
+                  className={styles.img1}
+                  width={212.73}
+                  height={212.73}
+                  priority
+                />
+                <Image
+                  src="/tech 1.png"
+                  alt="tech 1"
+                  className={styles.tech1}
+                  width={261.21}
+                  height={243.7}
+                  priority
+                />
+              </div>
+            </div>    
           </div>
         </div>
 
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
+      <div className={styles.page__content}>
+        <div className={`${styles.page__content} ${styles['page__content-firstfloor']}`}>
+          <h6 className={styles.floortag}>Practice Advice</h6>
+          <h2 className={styles.floortitle}>See Our Impressions</h2>
+          <p className={styles.floortext}>Problems trying to resolve the conflict between 
+            <br/>the two major realms of Classical physics: Newtonian mechanics </p>
+          <div className={styles.cards}>
+            <div className={styles.cards__position}>
+              <div className={`${styles.cards} ${styles['cards-card']}`}>
+                <h5 className={styles.card__title}>Emergency Case</h5>
+                <p className={styles.card__text}>The gradual <br/> accumulation and <br/> small-scale..</p>
+              </div>
+              <div className={`${styles.cards} ${styles['cards-card']}`}>
+                <h5 className={styles.card__title}>Quick examination</h5>
+                <p className={styles.card__text}>The gradual <br/> accumulation and <br/> small-scale..</p>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
+        <div className={`${styles.page__content} ${styles['page__content-secondfloor']}`}>
+          <div className={styles.secondfloor__leftside}>
+                <Image
+                  src="/tech 2.png"
+                  alt="tech 2"
+                  className={styles.tech2}
+                  width={556}
+                  height={471.61}
+                  priority
+                />
+          </div>
+          <div className={styles.secondfloor__rightside}>
+            <h2 className={styles.secondfloortitle}>Our Department</h2>
+            <p className={styles.secondfloortext}>Problems trying to resolve the conflict between 
+              <br/>the two major realms of Classical physics: <br/> Newtonian mechanics </p>
+            <h6 className={styles.learn}>Learn more</h6>
+          </div>
         </div>
-      </main>
+        <div className={`${styles.page__content} ${styles['page__content-firstfloor']}`}>
+          <h6 className={styles.floortag}>Practice Advice</h6>
+          <h2 className={styles.floortitle}>See Our Impressions</h2>
+          <p className={styles.floortext}>Problems trying to resolve the conflict between 
+            <br/>the two major realms of Classical physics: Newtonian mechanics </p>
+          <div className={styles.cards}>
+            <div className={styles.cards__position}>
+              <div className={`${styles.cards} ${styles['cards-card']}`}>
+                <Image
+                  src="/card 1.jpg"
+                  alt="card 1"
+                  className={styles.card1}
+                  width={348}
+                  height={300}
+                  priority
+                />
+                <a className={styles.product__category}>English Departement</a>
+                <h5 className={styles.product__title}>Best dental surgeons</h5>
+                <p className={`${styles.card__text} ${styles['product__text']}`}>We focus on ergonomics and meeting 
+                    you where you work. It's only a keystroke way.</p>
+              </div>
+              <div className={`${styles.cards} ${styles['cards-card']}`}>
+                <Image
+                  src="/card 2.jpg"
+                  alt="card 2"
+                  className={styles.card2}
+                  width={348}
+                  height={300}
+                  priority
+                />
+                <a className={styles.product__category}>English Departement</a>
+                <h5 className={`${styles.card__title} ${styles['product__title']}`}>Health Queries</h5>
+                <p className={`${styles.card__text} ${styles['product__text']}`}>We focus on ergonomics and meeting 
+                    you where you work. It's only a keystroke way.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     </>
   )
 }
